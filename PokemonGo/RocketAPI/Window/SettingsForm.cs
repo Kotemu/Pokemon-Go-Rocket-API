@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using GMap.NET.MapProviders;
 using GMap.NET;
 using System.Configuration;
+using System.Globalization;
 
 namespace PokemonGo.RocketAPI.Window
 {
@@ -41,9 +42,9 @@ namespace PokemonGo.RocketAPI.Window
             //center map on moscow
             string lat = ConfigurationManager.AppSettings["DefaultLatitude"];
             string longit = ConfigurationManager.AppSettings["DefaultLongitude"];
-            lat.Replace(',', '.');
-            longit.Replace(',', '.'); 
-            gMapControl1.Position = new PointLatLng(Convert.ToDouble(lat), Convert.ToDouble(longit));
+            lat = lat.Replace(',', '.');
+            longit = longit.Replace(',', '.');
+            gMapControl1.Position = new PointLatLng(double.Parse(lat, CultureInfo.InvariantCulture), double.Parse(longit, CultureInfo.InvariantCulture));
            
 
 

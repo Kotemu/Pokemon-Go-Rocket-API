@@ -39,7 +39,7 @@ namespace PokemonGo.RocketAPI.Helpers
                         $"[{DateTime.Now.ToString("HH:mm:ss")}] [#{i} of {MaxRetries}] retry request {request.RequestUri}");
                     if (i < MaxRetries)
                     {
-                        await Task.Delay(1000);
+                        await Task.Delay(3000);
                         continue;
                     }
                     throw;
