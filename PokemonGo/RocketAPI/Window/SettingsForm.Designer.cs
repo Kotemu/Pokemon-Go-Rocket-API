@@ -169,6 +169,7 @@
             this.ptcPassText.Name = "ptcPassText";
             this.ptcPassText.Size = new System.Drawing.Size(100, 20);
             this.ptcPassText.TabIndex = 12;
+            this.ptcPassText.UseSystemPasswordChar = true;
             // 
             // latitudeText
             // 
